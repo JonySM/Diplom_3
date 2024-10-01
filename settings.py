@@ -6,6 +6,7 @@ class Url:
     BASE_URL = 'https://stellarburgers.nomoreparties.site/api/'
     CREATE_USER = 'auth/register'
     DELETE_USER = 'auth/user'
+    GET_USERS_ORDERS = 'orders'
 
 
 class Data:

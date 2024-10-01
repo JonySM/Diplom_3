@@ -17,6 +17,7 @@ class LkPageLocators:
         (By.XPATH, ".//a[@class = 'Account_link__2ETsJ text text_type_main-medium text_color_inactive' "
                    "and (text()='История заказов')]")  # Неактивная вкладка история заказов
     LOGOUT_BUTTON_INSIDE_LK = (By.XPATH, ".//button[text()='Выход']")  # Кнопка выхода из ЛК
+    HISTORY_ORDER = (By.XPATH, ("(.//p[@class='text text_type_digits-default'])[1]")) # История заказов, определенный заказ
 
 
 

@@ -16,3 +16,4 @@ class StellarBurgersApi:
         headers = {'Authorization': accesstoken}
         response_delete = requests.delete(f'{Url.BASE_URL + Url.DELETE_USER}', headers=headers, verify=False)
         return response_delete
+

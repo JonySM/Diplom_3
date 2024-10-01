@@ -58,6 +58,10 @@ class LkPage(BasePage):
         logout_button = self.wait_and_find_element(LkPageLocators.LOGOUT_BUTTON_INSIDE_LK)
         logout_button.click()
 
+    def get_history_order_into_lk(self):
+        history_order = self.wait_and_find_element(LkPageLocators.HISTORY_ORDER)
+        return history_order
+
 
 
 
