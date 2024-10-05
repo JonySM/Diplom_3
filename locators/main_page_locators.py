@@ -23,4 +23,5 @@ class MainPageLocators:
     CREATE_ORDER_BUTTON = (By.XPATH, ".//button[@class='button_button__33qZ0 button_button_type_primary__"
                                      "1O7Bx button_button_size_large__G21Vg']")  # Кнопка "Оформить заказ"
     POPUP_ORDER = (By.XPATH, ".//div[@class='Modal_modal__contentBox__sCy8X pt-30 pb-30']")  # Попап заказа
-
+    ORDER_INTO_POPUP = (By.XPATH, ".//h2[@class='Modal_modal__title_shadow__3ikwq Modal_modal__title__2L34m"
+                                  " text text_type_digits-large mb-8']")  # Номер заказа в попап

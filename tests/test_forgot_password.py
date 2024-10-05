@@ -1,9 +1,11 @@
+import allure
 from pages.forgot_password_page import ForgotPasswordPage
 from pages.lk_page import LkPage
 from settings import Url, Data
 
 
 class TestForgotPassword:
+    @allure.title('Переход на страницу восстановления пароля')
     def test_switch_to_the_page_forgot_password(self, driver):
         lk_page = LkPage(driver)
         lk_page.open_page(Url.STELLAR_BURGERS_URL)
@@ -12,6 +14,7 @@ class TestForgotPassword:
         forgot_page = ForgotPasswordPage(driver)
         assert forgot_page.get_success_button().is_displayed()
 
+    @allure.title('Ввод почты и клик по кнопке «Восстановить»')
     def test_send_email_and_recovery_click(self, create_random_user, driver):
         lk_page = LkPage(driver)
         lk_page.open_page(Url.STELLAR_BURGERS_URL)
@@ -24,6 +27,7 @@ class TestForgotPassword:
         forgot_page.click_on_big_recovery_button()
         assert forgot_page.get_success_code_for_recovery_fild().is_displayed()
 
+    @allure.title('Клик по кнопке показать/скрыть пароль делает поле активным')
     def test_active_fild(self, create_random_user, driver):
         lk_page = LkPage(driver)
         lk_page.open_page(Url.STELLAR_BURGERS_URL)
